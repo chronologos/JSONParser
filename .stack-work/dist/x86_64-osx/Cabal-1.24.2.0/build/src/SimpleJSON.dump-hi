@@ -1,0 +1,589 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-06 06:03:47.681584 UTC
+
+interface JSONParser-0.1.0.0-6ULWelvBf5wGbW1jlDUAsy:SimpleJSON 8002
+  interface hash: d385b14336bfbc8a13679a580f973d81
+  ABI hash: 3a34bf7abd51713c9fd5d8c2a0fba0b0
+  export-list hash: 4b8a95cb8eff0097f9ed5751d824364a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  SimpleJSON.getArray
+  SimpleJSON.getBool
+  SimpleJSON.getDouble
+  SimpleJSON.getInt
+  SimpleJSON.getObject
+  SimpleJSON.getString
+  SimpleJSON.isNull
+  SimpleJSON.JValue{SimpleJSON.JArray SimpleJSON.JBool SimpleJSON.JNull SimpleJSON.JNumber SimpleJSON.JObject SimpleJSON.JString}
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fEqJValue :: GHC.Classes.Eq SimpleJSON.JValue
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ SimpleJSON.JValue
+                  SimpleJSON.$fEqJValue_$c==
+                  SimpleJSON.$fEqJValue_$c/= -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fEqJValue_$c/= ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: SimpleJSON.JValue) (b :: SimpleJSON.JValue) ->
+                 case SimpleJSON.$fEqJValue_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fEqJValue_$c== ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fOrdJValue :: GHC.Classes.Ord SimpleJSON.JValue
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ SimpleJSON.JValue
+                  SimpleJSON.$fEqJValue
+                  SimpleJSON.$fOrdJValue_$ccompare
+                  SimpleJSON.$fOrdJValue_$c<
+                  SimpleJSON.$fOrdJValue_$c<=
+                  SimpleJSON.$fOrdJValue_$c>
+                  SimpleJSON.$fOrdJValue_$c>=
+                  SimpleJSON.$fOrdJValue_$cmax
+                  SimpleJSON.$fOrdJValue_$cmin -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fOrdJValue_$c< ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fOrdJValue_$c<= ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fOrdJValue_$c> ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fOrdJValue_$c>= ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fOrdJValue_$ccompare ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> GHC.Types.Ordering
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fOrdJValue_$cmax ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> SimpleJSON.JValue
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: SimpleJSON.JValue) (y :: SimpleJSON.JValue) ->
+                 case SimpleJSON.$fOrdJValue_$c<= x y of wild {
+                   GHC.Types.False -> x GHC.Types.True -> y }) -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fOrdJValue_$cmin ::
+    SimpleJSON.JValue -> SimpleJSON.JValue -> SimpleJSON.JValue
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: SimpleJSON.JValue) (y :: SimpleJSON.JValue) ->
+                 case SimpleJSON.$fOrdJValue_$c<= x y of wild {
+                   GHC.Types.False -> y GHC.Types.True -> x }) -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fShowJValue :: GHC.Show.Show SimpleJSON.JValue
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ SimpleJSON.JValue
+                  SimpleJSON.$fShowJValue_$cshowsPrec
+                  SimpleJSON.$fShowJValue_$cshow
+                  SimpleJSON.$fShowJValue_$cshowList -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fShowJValue1 :: SimpleJSON.JValue -> GHC.Show.ShowS
+  {- Arity: 1 -}
+02ae533adf563c081a57ad3be73b81cc
+  $fShowJValue10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JString "#) -}
+ebcb1e4a191b5d076ac9cbf37ac252fe
+  $fShowJValue2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JArray "#) -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fShowJValue3 ::
+    ([GHC.Types.Char], SimpleJSON.JValue)
+    -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2 -}
+a6061bc5a01c2fa18e20b7e47a16d4f4
+  $fShowJValue4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JObject "#) -}
+3cff335787086d9122e504ac5df70f75
+  $fShowJValue5 :: GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   SimpleJSON.$fShowJValue6) -}
+a04bc8955453e785920cca5cc6fe721e
+  $fShowJValue6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JNull"#) -}
+99a5bd627973985d79cb6d188cae7ad7
+  $fShowJValue7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JBool "#) -}
+9ea7a42bea941ac3088f838ca800a702
+  $fShowJValue8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JNumber "#) -}
+ccd0823541f79291dfaf44c0cc1d6dec
+  $fShowJValue9 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fShowJValue_$cshow :: SimpleJSON.JValue -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: SimpleJSON.JValue) ->
+                 SimpleJSON.$fShowJValue_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fShowJValue_$cshowList :: [SimpleJSON.JValue] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ SimpleJSON.JValue
+                   SimpleJSON.$fShowJValue1) -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  $fShowJValue_$cshowsPrec ::
+    GHC.Types.Int -> SimpleJSON.JValue -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U>,
+     Unfolding: (\ (a :: GHC.Types.Int) (ds :: SimpleJSON.JValue) ->
+                 case ds of wild {
+                   SimpleJSON.JString b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             SimpleJSON.$fShowJValue10
+                             (GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows6
+                                (GHC.Show.showLitString
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x1)))
+                        GHC.Types.True
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                SimpleJSON.$fShowJValue10
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows6
+                                   (GHC.Show.showLitString
+                                      b1
+                                      (GHC.Types.:
+                                         @ GHC.Types.Char
+                                         GHC.Show.shows6
+                                         (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x1))))) } }
+                   SimpleJSON.JNumber b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = case b1 of ww { GHC.Types.D# ww1 ->
+                          GHC.Float.$w$sshowSignedFloat
+                            GHC.Float.$fShowDouble_$sshowFloat
+                            SimpleJSON.$fShowJValue9
+                            ww1 }
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++ @ GHC.Types.Char SimpleJSON.$fShowJValue8 (g x1)
+                        GHC.Types.True
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                SimpleJSON.$fShowJValue8
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x1))) } }
+                   SimpleJSON.JBool b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      let {
+                        p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                        = \ (x1 :: GHC.Base.String) ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            SimpleJSON.$fShowJValue7
+                            (case b1 of wild2 {
+                               GHC.Types.False -> GHC.Base.++ @ GHC.Types.Char GHC.Show.shows18 x1
+                               GHC.Types.True
+                               -> GHC.Base.++ @ GHC.Types.Char GHC.Show.shows17 x1 })
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False -> p
+                        GHC.Types.True
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x1)) } }
+                   SimpleJSON.JNull -> SimpleJSON.$fShowJValue5
+                   SimpleJSON.JObject b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             SimpleJSON.$fShowJValue4
+                             (GHC.Show.showList__
+                                @ ([GHC.Types.Char], SimpleJSON.JValue)
+                                SimpleJSON.$fShowJValue3
+                                b1
+                                x1)
+                        GHC.Types.True
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                SimpleJSON.$fShowJValue4
+                                (GHC.Show.showList__
+                                   @ ([GHC.Types.Char], SimpleJSON.JValue)
+                                   SimpleJSON.$fShowJValue3
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x1))) } }
+                   SimpleJSON.JArray b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             SimpleJSON.$fShowJValue2
+                             (GHC.Show.showList__
+                                @ SimpleJSON.JValue
+                                SimpleJSON.$fShowJValue1
+                                b1
+                                x1)
+                        GHC.Types.True
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                SimpleJSON.$fShowJValue2
+                                (GHC.Show.showList__
+                                   @ SimpleJSON.JValue
+                                   SimpleJSON.$fShowJValue1
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x1))) } } }) -}
+dd68c0ce4b56afa54048bd5d2c907170
+  $s$fEq(,) :: GHC.Classes.Eq ([GHC.Types.Char], SimpleJSON.JValue)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ([GHC.Types.Char], SimpleJSON.JValue)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     SimpleJSON.$s$fEq(,)_$dEq
+                     SimpleJSON.$s$fEq(,)_$dEq1)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     SimpleJSON.$s$fEq(,)_$dEq
+                     SimpleJSON.$s$fEq(,)_$dEq1) -}
+bc56aef4eaea88845b5fc89710b5d03a
+  $s$fEq(,)_$dEq :: GHC.Classes.Eq [GHC.Types.Char]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Classes.$fEq[]_$s$fEq[]1 -}
+94f8a2012ecfb475331024319d5a966b
+  $s$fEq(,)_$dEq1 :: GHC.Classes.Eq SimpleJSON.JValue
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) SimpleJSON.$fEqJValue -}
+e21bf77d548b7a86df6e14c4a51f2e04
+  $s$fOrd(,) :: GHC.Classes.Ord ([GHC.Types.Char], SimpleJSON.JValue)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ([GHC.Types.Char], SimpleJSON.JValue)
+                  SimpleJSON.$s$fOrd(,)_$s$fOrd(,)_$cp1Ord
+                  (GHC.Classes.$fOrd(,)_$ccompare
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     GHC.Classes.$fOrd[]_$s$fOrd[]1
+                     SimpleJSON.$fOrdJValue)
+                  (GHC.Classes.$fOrd(,)_$c<
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     GHC.Classes.$fOrd[]_$s$fOrd[]1
+                     SimpleJSON.$fOrdJValue)
+                  (GHC.Classes.$fOrd(,)_$c<=
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     GHC.Classes.$fOrd[]_$s$fOrd[]1
+                     SimpleJSON.$fOrdJValue)
+                  (GHC.Classes.$fOrd(,)_$c>
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     GHC.Classes.$fOrd[]_$s$fOrd[]1
+                     SimpleJSON.$fOrdJValue)
+                  (GHC.Classes.$fOrd(,)_$c>=
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     GHC.Classes.$fOrd[]_$s$fOrd[]1
+                     SimpleJSON.$fOrdJValue)
+                  (GHC.Classes.$fOrd(,)_$cmax
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     GHC.Classes.$fOrd[]_$s$fOrd[]1
+                     SimpleJSON.$fOrdJValue)
+                  (GHC.Classes.$fOrd(,)_$cmin
+                     @ [GHC.Types.Char]
+                     @ SimpleJSON.JValue
+                     GHC.Classes.$fOrd[]_$s$fOrd[]1
+                     SimpleJSON.$fOrdJValue) -}
+5ad77ed2a26166a87ca024ebf0c391d1
+  $s$fOrd(,)_$s$fOrd(,)_$cp1Ord ::
+    GHC.Classes.Eq ([GHC.Types.Char], SimpleJSON.JValue)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) SimpleJSON.$s$fEq(,) -}
+48ac0fecba68fee812c7b03534f211d1
+  $tc'JArray :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12796215220442604708##
+                   15574033775729121009##
+                   SimpleJSON.$trModule
+                   SimpleJSON.$tc'JArray1) -}
+004f79a6aabb619b4b219571a840ef22
+  $tc'JArray1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'JArray"#) -}
+0f548b0353e15dad70b87cc9cd13d288
+  $tc'JBool :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13037909535416253833##
+                   13346703360344607478##
+                   SimpleJSON.$trModule
+                   SimpleJSON.$tc'JBool1) -}
+8e1839ca096f4b4dab129230ca4fd6aa
+  $tc'JBool1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'JBool"#) -}
+2fd9d6b7dca388db247e23335da41d55
+  $tc'JNull :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4900616079721637749##
+                   12101033498917085671##
+                   SimpleJSON.$trModule
+                   SimpleJSON.$tc'JNull1) -}
+0f0edbec0c1fba921a8afe9069a884bf
+  $tc'JNull1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'JNull"#) -}
+d2463e92efc7ea5ff5437cf906e8a5df
+  $tc'JNumber :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10342689176289324122##
+                   12714556337848595591##
+                   SimpleJSON.$trModule
+                   SimpleJSON.$tc'JNumber1) -}
+5b1fe48ad21daedf4385898da9695e27
+  $tc'JNumber1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'JNumber"#) -}
+9b8222008e8e50b6183ef9e78d14c880
+  $tc'JObject :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12692749304748858839##
+                   15181584192526067133##
+                   SimpleJSON.$trModule
+                   SimpleJSON.$tc'JObject1) -}
+43f132eff5ac3f8a6fe92411e01176f8
+  $tc'JObject1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'JObject"#) -}
+7368f5fa3710f229d32bc6827a51e900
+  $tc'JString :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   165042019372032808##
+                   4610644112966451583##
+                   SimpleJSON.$trModule
+                   SimpleJSON.$tc'JString1) -}
+148e6f7d9d278ecfccc51bfe0e8f3223
+  $tc'JString1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'JString"#) -}
+15c65012881a936212f1c408db294f06
+  $tcJValue :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11244177983408934462##
+                   4665971803666762109##
+                   SimpleJSON.$trModule
+                   SimpleJSON.$tcJValue1) -}
+e10b8987727a5185c24db19a2febd8e1
+  $tcJValue1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "JValue"#) -}
+f09c09b0c6e1059200f5e08767470602
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   SimpleJSON.$trModule2
+                   SimpleJSON.$trModule1) -}
+3e0ef7bd18502ed91dd4986434edf21b
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "SimpleJSON"#) -}
+813d20ed249bd0fdb394f688322a7645
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "JSONParser-0.1.0.0-6ULWelvBf5wGbW1jlDUAsy"#) -}
+f7ead6e5c9bbc5e6bbdd319a608d2bb6
+  data JValue
+    = JString GHC.Base.String
+    | JNumber GHC.Types.Double
+    | JBool GHC.Types.Bool
+    | JNull
+    | JObject [(GHC.Base.String, SimpleJSON.JValue)]
+    | JArray [SimpleJSON.JValue]
+0b0ea082df6fb78286782540770190f5
+  getArray :: SimpleJSON.JValue -> GHC.Base.Maybe [SimpleJSON.JValue]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: SimpleJSON.JValue) ->
+                 case ds of wild {
+                   DEFAULT -> GHC.Base.Nothing @ [SimpleJSON.JValue]
+                   SimpleJSON.JArray a -> GHC.Base.Just @ [SimpleJSON.JValue] a }) -}
+1c43b17fbdbfa2d533655c5952fc8bd7
+  getBool :: SimpleJSON.JValue -> GHC.Base.Maybe GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: SimpleJSON.JValue) ->
+                 case ds of wild {
+                   DEFAULT -> GHC.Base.Nothing @ GHC.Types.Bool
+                   SimpleJSON.JBool b -> GHC.Base.Just @ GHC.Types.Bool b }) -}
+bfaeef10f98108a1f361ca959afa063f
+  getDouble :: SimpleJSON.JValue -> GHC.Base.Maybe GHC.Types.Double
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: SimpleJSON.JValue) ->
+                 case ds of wild {
+                   DEFAULT -> GHC.Base.Nothing @ GHC.Types.Double
+                   SimpleJSON.JNumber n -> GHC.Base.Just @ GHC.Types.Double n }) -}
+191dd066dbf9ca5e00459c5863d31525
+  getInt :: SimpleJSON.JValue -> GHC.Base.Maybe GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: SimpleJSON.JValue) ->
+                 case ds of wild {
+                   DEFAULT -> GHC.Base.Nothing @ GHC.Types.Int
+                   SimpleJSON.JNumber n
+                   -> GHC.Base.Just
+                        @ GHC.Types.Int
+                        (GHC.Float.RealFracMethods.double2Int n) }) -}
+ac73df6b1146eada02f87c5c9ee24b0e
+  getObject ::
+    SimpleJSON.JValue
+    -> GHC.Base.Maybe [(GHC.Base.String, SimpleJSON.JValue)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: SimpleJSON.JValue) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> GHC.Base.Nothing @ [(GHC.Base.String, SimpleJSON.JValue)]
+                   SimpleJSON.JObject o
+                   -> GHC.Base.Just @ [(GHC.Base.String, SimpleJSON.JValue)] o }) -}
+70c69a6d91219488f0b91dda35cd7848
+  getString :: SimpleJSON.JValue -> GHC.Base.Maybe GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: SimpleJSON.JValue) ->
+                 case ds of wild {
+                   DEFAULT -> GHC.Base.Nothing @ GHC.Base.String
+                   SimpleJSON.JString s -> GHC.Base.Just @ GHC.Base.String s }) -}
+3788ed27befefaa294bd1a84df6ad9cb
+  isNull :: SimpleJSON.JValue -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (v :: SimpleJSON.JValue) ->
+                 SimpleJSON.$fEqJValue_$c== v SimpleJSON.JNull) -}
+instance [safe] GHC.Classes.Eq [SimpleJSON.JValue]
+  = SimpleJSON.$fEqJValue
+instance [safe] GHC.Classes.Ord [SimpleJSON.JValue]
+  = SimpleJSON.$fOrdJValue
+instance [safe] GHC.Show.Show [SimpleJSON.JValue]
+  = SimpleJSON.$fShowJValue
+"SPEC/SimpleJSON $fEq(,) @ [Char] @ JValue" [ALWAYS] forall ($dEq1 :: GHC.Classes.Eq
+                                                                        SimpleJSON.JValue)
+                                                            ($dEq :: GHC.Classes.Eq
+                                                                       [GHC.Types.Char])
+  GHC.Classes.$fEq(,) @ [GHC.Types.Char]
+                      @ SimpleJSON.JValue
+                      $dEq
+                      $dEq1
+  = SimpleJSON.$s$fEq(,)
+"SPEC/SimpleJSON $fOrd(,) @ [Char] @ JValue" [ALWAYS] forall ($dOrd1 :: GHC.Classes.Ord
+                                                                          SimpleJSON.JValue)
+                                                             ($dOrd :: GHC.Classes.Ord
+                                                                         [GHC.Types.Char])
+  GHC.Classes.$fOrd(,) @ [GHC.Types.Char]
+                       @ SimpleJSON.JValue
+                       $dOrd
+                       $dOrd1
+  = SimpleJSON.$s$fOrd(,)
+"SPEC/SimpleJSON $fOrd(,)_$cp1Ord @ [Char] @ JValue" [ALWAYS] forall ($dOrd1 :: GHC.Classes.Ord
+                                                                                  SimpleJSON.JValue)
+                                                                     ($dOrd :: GHC.Classes.Ord
+                                                                                 [GHC.Types.Char])
+  GHC.Classes.$fOrd(,)_$cp1Ord @ [GHC.Types.Char]
+                               @ SimpleJSON.JValue
+                               $dOrd
+                               $dOrd1
+  = SimpleJSON.$s$fOrd(,)_$s$fOrd(,)_$cp1Ord
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

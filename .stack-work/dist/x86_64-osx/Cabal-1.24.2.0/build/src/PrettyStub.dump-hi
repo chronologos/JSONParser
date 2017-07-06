@@ -1,0 +1,192 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-06 06:04:36.859121 UTC
+
+interface JSONParser-0.1.0.0-6ULWelvBf5wGbW1jlDUAsy:PrettyStub 8002
+  interface hash: 083e0c14fea49793bb8e4050695dc739
+  ABI hash: 9bb9413c4291f6e5c02499f1008a94bc
+  export-list hash: f4141f76b2efd83a1c9d687c66ef1609
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  PrettyStub.<>
+  PrettyStub.char
+  PrettyStub.double
+  PrettyStub.enclose
+  PrettyStub.hcat
+  PrettyStub.text
+  PrettyStub.Doc{PrettyStub.ToBeDefined}
+module dependencies: SimpleJSON
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  SimpleJSON 3a34bf7abd51713c9fd5d8c2a0fba0b0
+  exports: 4b8a95cb8eff0097f9ed5751d824364a
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+98683e0d0a78da7a0b53223edf6c8543
+  $fShowDoc :: GHC.Show.Show PrettyStub.Doc
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ PrettyStub.Doc
+                  PrettyStub.$fShowDoc_$cshowsPrec
+                  PrettyStub.$fShowDoc_$cshow
+                  PrettyStub.$fShowDoc_$cshowList -}
+98683e0d0a78da7a0b53223edf6c8543
+  $fShowDoc1 :: PrettyStub.Doc -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*H><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: PrettyStub.Doc) (eta :: GHC.Base.String) ->
+                 case ds of wild { PrettyStub.ToBeDefined ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Char @ b c n PrettyStub.$fShowDoc2)
+                   eta }) -}
+bd159ae7c3a7ed6b2d3a540a5b794823
+  $fShowDoc2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ToBeDefined"#) -}
+98683e0d0a78da7a0b53223edf6c8543
+  $fShowDoc_$cshow :: PrettyStub.Doc -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*H>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: PrettyStub.Doc) ->
+                 case x of wild { PrettyStub.ToBeDefined ->
+                 PrettyStub.$fShowDoc2 }) -}
+98683e0d0a78da7a0b53223edf6c8543
+  $fShowDoc_$cshowList :: [PrettyStub.Doc] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ PrettyStub.Doc
+                   PrettyStub.$fShowDoc1) -}
+98683e0d0a78da7a0b53223edf6c8543
+  $fShowDoc_$cshowsPrec ::
+    GHC.Types.Int -> PrettyStub.Doc -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*H><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (ds1 :: PrettyStub.Doc)
+                   (eta :: GHC.Base.String) ->
+                 case ds1 of wild { PrettyStub.ToBeDefined ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Char @ b c n PrettyStub.$fShowDoc2)
+                   eta }) -}
+b64da6c98ec44ed060faca8acff5f253
+  $tc'ToBeDefined :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14250635734235945463##
+                   14397130661728070836##
+                   PrettyStub.$trModule
+                   PrettyStub.$tc'ToBeDefined1) -}
+315718958ba7f42d4c8a36addea66228
+  $tc'ToBeDefined1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ToBeDefined"#) -}
+6a2ad76b9a2000007f3e991df8f39592
+  $tcDoc :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6850711517337252920##
+                   8955408496539535518##
+                   PrettyStub.$trModule
+                   PrettyStub.$tcDoc1) -}
+c98cc59709c248dee296694d227aab88
+  $tcDoc1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Doc"#) -}
+9c24dd4567e9929ba5746a211bf7610a
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PrettyStub.$trModule2
+                   PrettyStub.$trModule1) -}
+d339eaf91e5d7de4e72ea5e421281941
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "PrettyStub"#) -}
+bff80dfa90881e4617a1653a3d7a05ef
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "JSONParser-0.1.0.0-6ULWelvBf5wGbW1jlDUAsy"#) -}
+d409ef60b2b91190323100a3196e3986
+  (<>) :: PrettyStub.Doc -> PrettyStub.Doc -> PrettyStub.Doc
+  {- Arity: 2, Strictness: <B,A><B,A>x,
+     Unfolding: InlineRule (2, True, True)
+                (\ (a :: PrettyStub.Doc) (b :: PrettyStub.Doc) ->
+                 PrettyStub.<>1) -}
+145243ee6bab75fae64e6e6150db8b50
+  <>1 :: PrettyStub.Doc
+  {- Strictness: x -}
+98683e0d0a78da7a0b53223edf6c8543
+  data Doc = ToBeDefined
+fa811ee70945763093d27af112875229
+  char :: GHC.Types.Char -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (c :: GHC.Types.Char) -> PrettyStub.char1) -}
+a0748a3349f5e10d9232b4e95c3c6bba
+  char1 :: PrettyStub.Doc
+  {- Strictness: x -}
+13a93cb23a567036f03e4cb245c11a2b
+  double :: GHC.Types.Double -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (num :: GHC.Types.Double) -> PrettyStub.double1) -}
+21ed6423c3acc6d050c79ffc500cc5bd
+  double1 :: PrettyStub.Doc
+  {- Strictness: x -}
+e918dc3d3f86dcce37a5b56ed6cce56e
+  enclose ::
+    GHC.Types.Char
+    -> GHC.Types.Char -> PrettyStub.Doc -> PrettyStub.Doc
+  {- Arity: 3, Strictness: <B,A><B,A><B,A>x,
+     Unfolding: InlineRule (3, True, True)
+                (\ (left :: GHC.Types.Char)
+                   (right :: GHC.Types.Char)
+                   (x :: PrettyStub.Doc) ->
+                 PrettyStub.<>1) -}
+6760d1d92f86b93a431fb157aba876fa
+  hcat :: [PrettyStub.Doc] -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (xs :: [PrettyStub.Doc]) -> PrettyStub.hcat1) -}
+f885a07f9810671069c6d8beb235f033
+  hcat1 :: PrettyStub.Doc
+  {- Strictness: x -}
+989c32709fdea20faccd53213a206954
+  text :: GHC.Base.String -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (str :: GHC.Base.String) -> PrettyStub.text1) -}
+8942120c6c7d0c45ad9d53238ce6d825
+  text1 :: PrettyStub.Doc
+  {- Strictness: x -}
+instance [safe] GHC.Show.Show [PrettyStub.Doc]
+  = PrettyStub.$fShowDoc
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

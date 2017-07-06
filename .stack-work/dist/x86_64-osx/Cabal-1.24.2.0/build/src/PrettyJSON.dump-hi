@@ -1,0 +1,179 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-06 06:04:37.005447 UTC
+
+interface JSONParser-0.1.0.0-6ULWelvBf5wGbW1jlDUAsy:PrettyJSON 8002
+  interface hash: 4fc10c17257a1a756b060dff7745f0a6
+  ABI hash: c6607af91b74b998082d8c8ab6397180
+  export-list hash: 95f9579b25f632708960fa11e000a8f5
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  PrettyJSON.astral
+  PrettyJSON.hexEscape
+  PrettyJSON.oneChar
+  PrettyJSON.renderJValue
+  PrettyJSON.simpleEscapes
+  PrettyJSON.smallHex
+  PrettyJSON.string
+module dependencies: PrettyStub SimpleJSON
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  PrettyStub 9bb9413c4291f6e5c02499f1008a94bc
+  exports: f4141f76b2efd83a1c9d687c66ef1609
+  <> d409ef60b2b91190323100a3196e3986
+  Doc 98683e0d0a78da7a0b53223edf6c8543
+  char fa811ee70945763093d27af112875229
+  double 13a93cb23a567036f03e4cb245c11a2b
+  enclose e918dc3d3f86dcce37a5b56ed6cce56e
+  hcat 6760d1d92f86b93a431fb157aba876fa
+  text 989c32709fdea20faccd53213a206954
+import  -/  SimpleJSON 3a34bf7abd51713c9fd5d8c2a0fba0b0
+  exports: 4b8a95cb8eff0097f9ed5751d824364a
+  JBool 6e1fe95def60a4499f4840c3111c58f5
+  JNull 072ab0bd3b20b373a7e837a267d84c0c
+  JNumber 95c26364ca433883de4b739bd421efb2
+  JString 21b9c534bb8d409eae42d18bfd8c0157
+  JValue f7ead6e5c9bbc5e6bbdd319a608d2bb6
+import  -/  base-4.9.1.0:Data.Bits d707ac81dd0124c7a7fb3234df2c8548
+import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:Numeric bdcfa841811670500691657d058d32ea
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+d9a7039fc93bf33f7fe8f5a97f5f4abd
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PrettyJSON.$trModule2
+                   PrettyJSON.$trModule1) -}
+05a1bf9ecfa573e66e798f4a649ef116
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "PrettyJSON"#) -}
+7b17eb18c09ff8e44c43c5ae70cf055e
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "JSONParser-0.1.0.0-6ULWelvBf5wGbW1jlDUAsy"#) -}
+11e53e7d5142af192416db464887f5cf
+  $wastral :: GHC.Prim.Void# -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+670f7fd527da79976fb6eb88920bb91f
+  $whexEscape :: GHC.Prim.Char# -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,U>x, Inline: [0] -}
+e813ed86b29fe5488362f7f39cb045ae
+  $woneChar :: GHC.Prim.Char# -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,U>x, Inline: [0] -}
+a003b7fe23f5d2ef6ee88b13e826e53f
+  $wsmallHex :: GHC.Prim.Void# -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+274c780675440142e9013ad90408fa76
+  astral :: GHC.Types.Int -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, True)
+                (\ (w :: GHC.Types.Int) -> PrettyJSON.$wastral GHC.Prim.void#) -}
+3a16aa6d3dc96a868eabfac36fb22f35
+  hexEscape :: GHC.Types.Char -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,1*U(U)>x, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Char) ->
+                 case w of ww { GHC.Types.C# ww1 -> PrettyJSON.$whexEscape ww1 }) -}
+663aeb69b700201a86ea962479d19f20
+  oneChar :: GHC.Types.Char -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,U(U)>x, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Char) ->
+                 case w of ww { GHC.Types.C# ww1 -> PrettyJSON.$woneChar ww1 }) -}
+0eb4603e2dc042cb71ad5159ba82a9a5
+  renderJValue :: SimpleJSON.JValue -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,1*U>x,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: SimpleJSON.JValue) ->
+                 case ds of wild {
+                   DEFAULT -> PrettyJSON.renderJValue1
+                   SimpleJSON.JString str -> PrettyStub.<>1
+                   SimpleJSON.JNumber num -> PrettyStub.double1
+                   SimpleJSON.JBool ds1
+                   -> case ds1 of wild1 { DEFAULT -> PrettyStub.text1 }
+                   SimpleJSON.JNull -> PrettyStub.text1 }) -}
+a84b635fbe0481de1fff5ba5d758e320
+  renderJValue1 :: PrettyStub.Doc
+  {- Strictness: x -}
+754e1c32107fa74c29b7c38e69d78ecf
+  simpleEscapes :: [(GHC.Types.Char, GHC.Base.String)]
+  {- Unfolding: (PrettyJSON.simpleEscapes2
+                   PrettyJSON.simpleEscapes1) -}
+3d6a0ea8bdf9ba83fcf950ec79e7871e
+  simpleEscapes1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "bnfrt\\\"/"#) -}
+4e70a2cd7260abcfb6c23cdba7800400
+  simpleEscapes2 ::
+    [GHC.Types.Char] -> [(GHC.Types.Char, [GHC.Types.Char])]
+  {- Unfolding: (GHC.CString.unpackFoldrCString#
+                   @ ([GHC.Types.Char] -> [(GHC.Types.Char, [GHC.Types.Char])])
+                   "\b\n\
+                   \\f\r\t\\\"/"#
+                   PrettyJSON.simpleEscapes4
+                   PrettyJSON.simpleEscapes3) -}
+925c302843c398c3dee69264c3bd5927
+  simpleEscapes3 ::
+    [GHC.Types.Char] -> [(GHC.Types.Char, [GHC.Types.Char])]
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (ds :: [GHC.Types.Char]) ->
+                 GHC.Types.[] @ (GHC.Types.Char, [GHC.Types.Char])) -}
+efd3ce01a115e4ee45ac7270f4b0187d
+  simpleEscapes4 ::
+    GHC.Types.Char
+    -> ([GHC.Types.Char] -> [(GHC.Types.Char, [GHC.Types.Char])])
+    -> [GHC.Types.Char]
+    -> [(GHC.Types.Char, [GHC.Types.Char])]
+  {- Arity: 3, HasNoCafRefs,
+     Unfolding: (\ (_x :: GHC.Types.Char)
+                   (_r :: [GHC.Types.Char]
+                          -> [(GHC.Types.Char, [GHC.Types.Char])])[OneShot]
+                   (ds :: [GHC.Types.Char]) ->
+                 case ds of wild {
+                   [] -> GHC.Types.[] @ (GHC.Types.Char, [GHC.Types.Char])
+                   : y ys
+                   -> GHC.Types.:
+                        @ (GHC.Types.Char, [GHC.Types.Char])
+                        (_x,
+                         GHC.Types.:
+                           @ GHC.Types.Char
+                           PrettyJSON.simpleEscapes5
+                           (GHC.Types.: @ GHC.Types.Char y (GHC.Types.[] @ GHC.Types.Char)))
+                        (_r ys) }) -}
+e06ac64ac84fe74fa776446242b17a6d
+  simpleEscapes5 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '\\'#) -}
+52555954c6d53a10c97520c3a82c94e2
+  smallHex :: GHC.Types.Int -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, True)
+                (\ (w :: GHC.Types.Int) -> PrettyJSON.$wsmallHex GHC.Prim.void#) -}
+15669ff4709740b819ef039bc18061d9
+  string :: GHC.Base.String -> PrettyStub.Doc
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (x :: [GHC.Types.Char]) -> PrettyStub.<>1) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
